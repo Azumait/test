@@ -61,9 +61,9 @@
             const prediction = await model.predict(webcam.canvas);
             // ***
             if (prediction[0].probability.toFixed(2) === 1) {
-                labelContainer.childNodes[i].innerHTML = 'D.Yang. The Developer of this App.';                
+                labelContainer.childNodes[0].innerHTML = 'D.Yang. The Developer of this App.';                
             } else if (prediction[1].probability.toFixed(2) === 1) {
-                labelContainer.childNodes[i].innerHTML = 'mouse. A pointer tool of pc.';                
+                labelContainer.childNodes[1].innerHTML = 'mouse. A pointer tool of pc.';                
             }
             // for (let i = 0; i < maxPredictions; i++) {
             //     const classPrediction =
