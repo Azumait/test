@@ -60,9 +60,9 @@
             // predict can take in an image, video or canvas html element
             const prediction = await model.predict(webcam.canvas);
             // ***
-            if (prediction[0].className == 'Yang' && prediction[0].probability.toFixed(2) === 1.00) {
+            if (prediction[0].className == 'Yang' && prediction[0].probability.toFixed(2) > 0.90) {
                 labelContainer.childNodes[0].innerHTML = 'D.Yang. The Developer of this App.';                
-            } else if (prediction[1].probability.toFixed(2) === 1.00) {
+            } else if (prediction[1].probability.toFixed(2) > 0.90) {
                 labelContainer.childNodes[0].innerHTML = 'mouse. A pointer tool of pc.';                
             } else {
                 labelContainer.childNodes[0].innerHTML = 'I don\'t know yet.';                
